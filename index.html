@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        
+       <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css"> 
+        <link rel="stylesheet" href="./css/main.min.css">
+
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header class="head">
+        <div class="head-fot">
+            <img src="/img/fish.bmp" alt="fish">
+            <h1 class= head-name >Суши-шмастер</h1>
+         </div>
+        <button
+        type="button"
+        class="menu-buton is-open"
+        aria-expanded="false"
+        data-menu-button>
+           <h2 class = buton-name>Сделать заказ</h2> 
+        </button>
+
+
+    </header>
+    <section class="description contaner">
+        <div class="inform">
+            <h1 class="inform-name">Суши-шмастер - лучшее, что есть в твоем городе</h1>
+            <h2 class="inform-name nametwo">Порадуй себя и своих родных и близких</h2>
+            <p class = "inform-par">Ниже представлены наши  самые популярные позиции за последние полгода работы на карантине</p>
+            
+
+            <h2 class="propsition">Актуальние позиции</h2>
+            <ul class="pos-cart">
+                
+                    <li class="borderk "> 
+                        <figure class="fig"> 
+                            <img src="/img/s1.bmp" alt="" >
+                        </figure>
+                        <p class="cart-name">Гринобль ролл</p>
+                        <p class = "cart-descriptio">Закажи сей вкусный ролл, Он украсит ваший стол, Он порадует ваш глаз, Получи скорей экстаз!</p>
+                                              
+                         <a href=# class=" items zak">Заказать</a>    
+                                                                    
+                    </li> 
+
+                    <li class="borderk "> 
+                        <figure class="fig"> 
+                            <img  src="/img/s2.bmp" alt="" >
+                        </figure>
+                        <p class="cart-name">Оранжад ролл</p>
+                        <p class = "cart-descriptio">Закажи сей вкусный ролл, Он украсит ваший стол, Он порадует ваш глаз, Получи скорей экстаз!</p>
+                        <p class="items"> Недоступно к заказу </p>   
+                                                                    
+                    </li> 
+
+                    <li class="borderk "> 
+                        <figure class="fig"> 
+                            <img  src="/img/s3.bmp" alt="" >
+                        </figure>
+                        <p class="cart-name">Гринобль ролл</p>
+                        <p class = "cart-descriptio">Закажи сей вкусный ролл, Он украсит ваший стол, Он порадует ваш глаз, Получи скорей экстаз!</p>
+                        <p class="items"> Недоступно к заказу </p>   
+                                                                    
+                    </li> 
+
+                    
+
+                    <li class=" item"> 
+                       
+                    
+                       
+                        <figure class="fig2"> 
+                            <img s src="/img/s44.bmp" alt="Игорь Демьяненко" >
+                        </figure>
+                        
+                        
+                                                                    
+                    </li> 
+            </ul>
+        </div>
+    </section>
+<section class="slider">
+    
+        <h1 class="slider-name">
+            Самые выгодные предложения:
+        </h1>
+
+        <div class="slider">
+            <ul>
+                <li><img src="/img/1.bmp" alt=""></li>
+                <li><img src="/img/2.bmp" alt=""></li>
+                <li><img src="/img/3.bmp" alt=""></li>
+            </ul>
+        </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                     $(".slider").each(function () { 
+                      var obj = $(this);
+                      $(obj).append("<div class='nav'></div>");
+                      $(obj).find("li").each(function () {
+                       $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); 
+                       $(this).addClass("slider"+$(this).index());
+                      });
+                      $(obj).find("span").first().addClass("on"); 
+                     });
+                    });
+                    function sliderJS (obj, sl) { 
+                     var ul = $(sl).find("ul"); 
+                     var bl = $(sl).find("li.slider"+obj); 
+                     var step = $(bl).width(); 
+                     $(ul).animate({marginLeft: "-"+step*obj}, 500);
+                    }
+                    $(document).on("click", ".slider .nav span", function() { 
+                     var sl = $(this).closest(".slider"); 
+                     $(sl).find("span").removeClass("on"); 
+                     $(this).addClass("on"); 
+                     var obj = $(this).attr("rel"); 
+                     sliderJS(obj, sl); 
+                     return false;
+                    });
+                    </script>
+
+<style type="text/css">
+    .slider {
+  
+    width: 100%;
+    height: 790px;
+    overflow: hidden;
+    margin: 0 0 7px;
+    position: relative;
+    }
+    .slider ul,
+    .slider li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    }
+    .slider ul {
+    width: 9999px; 
+    }
+    .slider ul li {
+    list-style-type: none;
+    float: left;
+    width: 700px;
+    height: 290px;
+    }
+    .slider .nav {
+    position: absolute;
+    left: 15px;
+    bottom: 12px; 
+    }
+    .slider .nav span {
+    opacity: 0.9;
+    background: #fff;
+    margin: 0 8px 0 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    float: left;
+    box-shadow: 0 1px 2px #000;
+    }
+    .slider .nav span.on {
+    background: #2e9419;
+    }
+   </style>
+                
+          
+    
+</section>
+
+    
+
+    <footer class="footer">
+        Copyright
+        <script type="text/javascript">
+            var d = new Date();
+            document.write(d.getFullYear());
+        </script>  
+    </footer>
+    
+</body>
+
+</html>

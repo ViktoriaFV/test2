@@ -1,0 +1,30 @@
+.slider
+{
+    background: #6DCFF6;
+    height: 706px;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.slider-name
+{
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 24px;margin: 0;
+    padding-bottom: 53px;
+    padding-top: 95px;
+    
+    /* identical to box height, or 53% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    
+
+}

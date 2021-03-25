@@ -1,0 +1,110 @@
+.head {
+  
+    height: 118px;
+    width: 100%;
+    padding: 0;margin: 0;
+    background-color: #0072BC;
+    display: flex;
+     flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+   
+    
+
+    
+    @media screen and (min-width: 320px) and (max-width:767px) {
+      min-width: 100%;
+      display: flex;
+     flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    height: inherit;;
+ 
+     
+    }
+  
+  }
+
+  .head-fot
+  {
+    display: flex;
+    flex-direction: row;
+
+  }
+  .head-name
+    {
+      margin: 0;
+      margin-left: 23px;
+      
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 24px;
+    
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    @media screen and (min-width: 320px) {
+      font-size: 20px;
+      line-height: 12px;
+      font-style: 300;
+      
+      
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+      line-height: 18px;
+    
+    }
+    
+    }
+  .menu-buton{
+    display: none;
+   
+    
+    margin: 0;
+    height: 62px;
+    width: 252px;
+    background: #F26522;
+    display: block;
+    align-items:baseline;
+
+    @media screen and (min-width: 320px) {
+      font-size: 20px;
+      line-height: 12px;
+      font-style: 300;
+     
+      
+      
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+      line-height: 18px;
+     
+    
+    }
+
+ 
+    
+
+    
+
+}
+
+.buton-name
+{
+ padding: 0;
+  font-family: PT Sans;
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 24px;
+  /* identical to box height, or 92% */
+
+  display: block;
+  align-items: center;
+
+  color: #FDFAFA;
+}
